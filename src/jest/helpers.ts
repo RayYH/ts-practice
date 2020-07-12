@@ -1,7 +1,7 @@
 export function fetchData(isResolved: boolean, isThrown = false): Promise<string> {
   return new Promise(function (resolve, reject) {
     if (isThrown) {
-      throw new Error("error");
+      throw new Error('error');
     }
 
     isResolved
