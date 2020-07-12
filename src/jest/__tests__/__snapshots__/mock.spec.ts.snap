@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.mock property and mock matchers 1`] = `
+[MockFunction my mock] {
+  "calls": Array [
+    Array [
+      "first arg",
+      "second arg",
+    ],
+    Array [
+      "",
+      "",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": "return value",
+    },
+    Object {
+      "type": "return",
+      "value": "return value",
+    },
+  ],
+}
+`;

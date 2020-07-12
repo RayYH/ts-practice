@@ -1,0 +1,45 @@
+name: CI
+on: [push]
+jobs:
+  csfix:
+    name: csfix
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout core
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: install dependencies
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - name: run lint:fix
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: lint:fix
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply lint fix changes
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test:
+    name: Test
+    needs: csfix
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout core
+        uses: actions/checkout@v2
+      - name: install dependencies
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - name: run app
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: start
+      - name: run tests
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test
