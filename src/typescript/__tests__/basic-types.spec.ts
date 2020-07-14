@@ -1,4 +1,4 @@
-import { getArray, getBoolean, getEnum, getNumber, getString, getTurple, greeting } from '../basic-types';
+import { getArray, getBoolean, getEnum, getNumber, getString, getTuple, greeting } from '../basic-types';
 
 test('boolean', () => {
   expect(getBoolean(true)).toBeFalsy();
@@ -29,9 +29,9 @@ test('array', () => {
   expect(getArray('any')).toEqual([1, true, 'free']);
 });
 
-test('turple', () => {
-  expect(getTurple(['Ray', 24])).toEqual("Ray's age is 24.");
-  expect(getTurple(['Tom', 22])).toEqual("Tom's age is 22.");
+test('tuple', () => {
+  expect(getTuple(['Ray', 24])).toEqual("Ray's age is 24.");
+  expect(getTuple(['Tom', 22])).toEqual("Tom's age is 22.");
 });
 
 test('enum', () => {

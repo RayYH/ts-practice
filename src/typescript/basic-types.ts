@@ -61,8 +61,8 @@ export function getArray(type: string): any {
   }
 }
 
-// turple
-export function getTurple([name, age]: [string, number]): string {
+// tuple
+export function getTuple([name, age]: [string, number]): string {
   const user: [string, number] = [name, age];
   return `${user[0]}'s age is ${user[1]}.`;
 }
@@ -126,6 +126,6 @@ export default {
   getString,
   greeting,
   getArray,
-  getTurple,
+  getTuple,
   getEnum,
 };
