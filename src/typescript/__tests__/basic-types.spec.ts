@@ -24,7 +24,7 @@ test('greeting', () => {
 
 test('array', () => {
   expect(getArray('number')).toEqual([1, 2, 3]);
-  expect(getArray('default')).toEqual([1, 2, 3]);
+  expect(getArray('default-case')).toEqual([1, 2, 3]);
   expect(getArray('string')).toEqual(['one', 'two', 'three']);
   expect(getArray('any')).toEqual([1, true, 'free']);
 });

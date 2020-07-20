@@ -7,5 +7,3 @@ export function randomString(length: number): string {
   }
   return result;
 }
-
-export default { randomString };
