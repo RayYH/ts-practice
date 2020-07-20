@@ -10,6 +10,7 @@ test('number', () => {
   expect(getNumber('oct')).toEqual(484);
   expect(getNumber('bin')).toEqual(10);
   expect(getNumber('hex')).toEqual(61453);
+  expect(getNumber('bigint')).toEqual(100n);
   expect(getNumber('default')).toEqual(0);
 });
 

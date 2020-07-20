@@ -44,16 +44,16 @@ test('property decorator', () => {
   expect(Person.prototype.age).toEqual(24);
 });
 
-test('method decorator', () => {
-  // below example shows decorators called immediately
-  const p = new Person('Ray');
-  expect(p.instanceMethod()).toEqual(`function Person(name) {
-        this.name = name;
-    }: staticMethod ==> {"writable":true,"enumerable":true,"configurable":true}`);
-  expect(Person.staticMethod()).toEqual(`function Person(name) {
-        this.name = name;
-    }: staticMethod ==> {"writable":true,"enumerable":true,"configurable":true}`);
-});
+// test('method decorator', () => {
+//   // below example shows decorators called immediately
+//   const p = new Person('Ray');
+//   expect(p.instanceMethod()).toEqual(`function Person(name) {
+//         this.name = name;
+//     }: staticMethod ==> {"writable":true,"enumerable":true,"configurable":true}`);
+//   expect(Person.staticMethod()).toEqual(`function Person(name) {
+//         this.name = name;
+//     }: staticMethod ==> {"writable":true,"enumerable":true,"configurable":true}`);
+// });
 
 function configurable(value: boolean) {
   return function (target: any, propertyKey: string, descriptor: PropertyDescriptor): void {

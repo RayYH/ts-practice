@@ -2,3 +2,6 @@
 const log = console.log;
 
 log('ts-practice!');
+
+const big = 100n;
+console.log(big);

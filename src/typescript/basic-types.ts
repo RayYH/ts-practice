@@ -8,8 +8,8 @@ export function getBoolean(bool: boolean): boolean {
 }
 
 // number
-export function getNumber(type: string): number {
-  let num: number;
+export function getNumber(type: string): number | bigint {
+  let num: number | bigint;
   switch (type) {
     case 'dec':
       num = 6;
@@ -22,6 +22,9 @@ export function getNumber(type: string): number {
       break;
     case 'oct':
       num = 0o744; // 4+4*8+7*64 = 484
+      break;
+    case 'bigint':
+      num = 100n;
       break;
     default:
       num = 0;
