@@ -40,12 +40,18 @@ export function getString(length: number): string {
 }
 
 // template string
-export function greeting(name: string): string {
+export function greeting(name: string, age?: number): string {
+  if (age) {
+    return `Hello, my name is ${name}.
+
+I'll be ${age + 1} years old next year.`;
+  }
+
   return `Hello, ${name}!`;
 }
 
 // array
-export function getArray(type: string): any {
+export function getArray(type: string): any[] | { [index: number]: any } {
   const numberList: number[] = [1, 2, 3];
   const stringList: Array<string> = ['one', 'two', 'three'];
 
@@ -54,7 +60,7 @@ export function getArray(type: string): any {
     [index: number]: any;
   }
 
-  // is equivalent to `const anyList: any[] = XXX`
+  // is equivalent to `const anyList: any[] = [XXX, YYY, ZZZ]`
   const anyList: Arr = [1, true, 'free'];
   switch (type) {
     case 'number':
@@ -89,7 +95,7 @@ export function getEnum(): string {
 
   str += `[${red} => ${Color[red]} ${green} => ${Color[green]} ${blue} => ${Color[blue]}]`;
 
-  // with start-index 1
+  // with start index at 1
   enum ColorNew {
     RED = 1,
     GREEN,
