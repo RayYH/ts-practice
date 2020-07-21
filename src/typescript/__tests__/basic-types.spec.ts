@@ -1,4 +1,4 @@
-import {getArray, getBoolean, getEnum, getNumber, getString, getTuple, greeting} from '../basic-types';
+import { getArray, getBoolean, getEnum, getNumber, getString, getTuple, greeting } from '../basic-types';
 
 declare const maybe: unknown;
 
@@ -81,13 +81,12 @@ test('any', () => {
     return key.toUpperCase();
   }
 
-  const str: string = getValue("String");
-  expect(str).toEqual("STRING");
+  const str: string = getValue('String');
+  expect(str).toEqual('STRING');
 
-  let looselyTyped: any = 4;
-  expect(looselyTyped.toFixed(2)).toEqual("4.00");
-})
-
+  const looselyTyped: any = 4;
+  expect(looselyTyped.toFixed(2)).toEqual('4.00');
+});
 
 test('never', () => {
   // Function returning never must not have a reachable end point
@@ -98,35 +97,35 @@ test('never', () => {
 
   // Inferred return type is never
   function fail() {
-    return error("Something failed");
+    return error('Something failed');
   }
 
   try {
-    fail()
+    fail();
   } catch (e) {
-    expect(e.toString()).toEqual("Error: Something failed");
+    expect(e.toString()).toEqual('Error: Something failed');
   }
-})
+});
 
 test('object', () => {
   function mergeObject(o1: object, o2: object): object {
-    return {...o1, ...o2}
+    return { ...o1, ...o2 };
   }
 
-  expect(mergeObject({}, {})).toEqual({})
-  expect(mergeObject({a: 1}, {b: 2})).toEqual({a: 1, b: 2})
-  expect(mergeObject({a: 1}, {a: 2})).toEqual({a: 2})
-})
+  expect(mergeObject({}, {})).toEqual({});
+  expect(mergeObject({ a: 1 }, { b: 2 })).toEqual({ a: 1, b: 2 });
+  expect(mergeObject({ a: 1 }, { a: 2 })).toEqual({ a: 2 });
+});
 
 test('type-assertions', () => {
   describe('as-syntax', () => {
-    let someValue: any = "this is a string";
-    let strLength: number = (someValue as string).length;
+    const someValue: any = 'this is a string';
+    const strLength: number = (someValue as string).length;
     expect(strLength).toEqual(16);
-  })
+  });
   describe('angle-bracket syntax', () => {
-    let someValue: any = "this is a string";
-    let strLength: number = (<string>someValue).length;
+    const someValue: any = 'this is a string';
+    const strLength: number = (<string>someValue).length;
     expect(strLength).toEqual(16);
-  })
+  });
 });

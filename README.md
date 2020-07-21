@@ -2,7 +2,11 @@
 
 Some ts code, **use at your own risk**.
 
-## Dev Scripts
+## Requirements
+
+Please make sure you have the latest version of node installed. [nvm](https://github.com/nvm-sh/nvm) is a solution for you.
+
+## Scripts
 
 ```bash
 # install dependencies
