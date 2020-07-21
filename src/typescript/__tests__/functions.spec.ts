@@ -13,14 +13,14 @@ test('function types', () => {
     return x + y;
   }
 
-  let myAdd = function (x: number, y: number): number {
+  const myAdd = function (x: number, y: number): number {
     return x + y;
   };
 
   // these parameter names are just to help with readability, we could have instead written
-  let myAddWithReturnedType: (baseValue: number, increment: number) => number = function(
+  const myAddWithReturnedType: (baseValue: number, increment: number) => number = function (
     x: number,
-    y: number
+    y: number,
   ): number {
     return x + y;
   };
@@ -74,18 +74,18 @@ test('this', () => {
     createCardPicker(this: Deck): () => Card;
   }
   const deck: Deck = {
-    suits: ["hearts", "spades", "clubs", "diamonds"],
+    suits: ['hearts', 'spades', 'clubs', 'diamonds'],
     cards: Array(52),
     // NOTE: The function now explicitly specifies that its callee must be of type Deck
     // Arrow functions capture the this where the function is created rather than where it is invoked.
-    createCardPicker: function(this: Deck) {
+    createCardPicker: function (this: Deck) {
       return () => {
-        let pickedCard = Math.floor(Math.random() * 52);
-        let pickedSuit = Math.floor(pickedCard / 13);
+        const pickedCard = Math.floor(Math.random() * 52);
+        const pickedSuit = Math.floor(pickedCard / 13);
 
         return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
       };
-    }
+    },
   };
 
   const cardPicker = deck.createCardPicker();
