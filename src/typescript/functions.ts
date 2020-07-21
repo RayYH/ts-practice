@@ -4,7 +4,7 @@ export function buildNameRegular(firstName: string, lastName: string): string {
 
 export function buildNameOptional(firstName: string, lastName?: string): string {
   if (lastName) return firstName + ' ' + lastName;
-  else return firstName;
+  return firstName;
 }
 
 // "Smith" indicates that lastName's type is string
@@ -33,11 +33,3 @@ export interface Deck {
 }
 
 // functions also support overloading, check official doc for more info.
-
-export default {
-  buildNameRest,
-  buildNameDefaultParameterCanBeAtFirst,
-  buildNameDefault,
-  buildNameOptional,
-  buildNameRegular,
-};
