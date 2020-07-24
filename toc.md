@@ -1,4 +1,4 @@
-# Features
+# ToC
 
 ## TypeScript
 
@@ -6,7 +6,7 @@
 - [x] Interfaces
 - [x] Functions
 - [x] Literal Types
-- [ ] Unions and Intersections
-- [ ] Classes
+- [x] Unions and Intersections
+- [x] Classes
 - [ ] Enums
 - [ ] Generics

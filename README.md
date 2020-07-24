@@ -9,6 +9,9 @@ Please make sure you have the latest version of node installed. [nvm](https://gi
 ## Scripts
 
 ```bash
+# use latest version of node
+nvm install
+
 # install dependencies
 yarn install
 
@@ -25,6 +28,10 @@ yarn lint
 yarn lint:fix
 ```
 
+## ToC
+
+See [ToC](toc.md).
+
 ## Reference Links
 
 + [typescript official docs](https://www.typescriptlang.org/docs/handbook)
@@ -34,4 +41,4 @@ yarn lint:fix
 
 ## LICENSE
 
-This project is licensed under the [MIT](LICENSE).
+This project is licensed under the [MIT](LICENSE) license.
