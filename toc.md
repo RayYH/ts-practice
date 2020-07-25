@@ -8,5 +8,5 @@
 - [x] Literal Types
 - [x] Unions and Intersections
 - [x] Classes
-- [ ] Enums
+- [x] Enums
 - [ ] Generics

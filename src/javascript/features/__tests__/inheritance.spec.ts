@@ -8,7 +8,7 @@
 describe('Function object have prototypes', () => {
   test('Function object', () => {
     // without new keyword
-    const F = function () {
+    const F: () => void = function (): void {
       console.log('F');
     };
     expect(F.prototype).not.toBe(undefined);

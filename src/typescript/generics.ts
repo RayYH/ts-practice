@@ -27,5 +27,3 @@ export function loggingIdentity<T extends Lengthwise>(arg: T): number {
 export function getProperty<T, K extends keyof T>(obj: T, key: K): any {
   return obj[key];
 }
-
-export default { identity, identityArray, arrayLength, GenericNumber, loggingIdentity, getProperty };
