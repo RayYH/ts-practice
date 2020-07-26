@@ -36,7 +36,7 @@ test('generic classes', () => {
     return x + y;
   };
   expect(myGenericNumber.add(myGenericNumber.zeroValue, 1)).toEqual(1);
-  //
+  // string
   const myStringNumeric = new GenericNumber<string>();
   myStringNumeric.zeroValue = '';
   myStringNumeric.add = function (x, y): string {
@@ -62,7 +62,7 @@ test('show some usages', () => {
   }
 
   class ZooKeeper {
-    nametag: string;
+    nameTag: string;
   }
 
   class Animal {
@@ -84,7 +84,7 @@ test('show some usages', () => {
   const lion = createInstance(Lion);
   lion.numLegs = 4;
   lion.keeper = new ZooKeeper();
-  lion.keeper.nametag = 'lion';
+  lion.keeper.nameTag = 'lion';
   const bee = createInstance(Bee);
   bee.numLegs = 6;
   bee.keeper = new BeeKeeper();

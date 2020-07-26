@@ -9,4 +9,4 @@
 - [x] Unions and Intersections
 - [x] Classes
 - [x] Enums
-- [ ] Generics
+- [x] Generics
