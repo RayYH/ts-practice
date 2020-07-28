@@ -10,3 +10,4 @@
 - [x] Classes
 - [x] Enums
 - [x] Generics
+- [x] Advanced Types

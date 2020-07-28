@@ -17,6 +17,8 @@ module.exports = {
     // allow require
     "@typescript-eslint/no-var-requires": 0,
     // object
-    "@typescript-eslint/ban-types": 0
+    "@typescript-eslint/ban-types": 0,
+    // allow !. syntax
+    "@typescript-eslint/no-non-null-assertion": 0
   },
 };
