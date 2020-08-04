@@ -1,3 +1,3 @@
 # Tail Call Optimization
 
-Provide some examples show tail-call-optimization in JavaScript.
+Provide some examples about tail-call-optimization in JavaScript.
