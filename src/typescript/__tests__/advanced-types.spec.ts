@@ -443,6 +443,15 @@ test('polymorphic this types', () => {
   expect(v).toEqual(0.4559788891106302);
 });
 
+test('tail call', () => {
+  function factorial(n: number): number {
+    if (n === 1) return 1;
+    return n * factorial(n - 1);
+  }
+
+  factorial(5);
+});
+
 test('index types', () => {
   // For any type T, keyof T is the union of known, public property names of T.
   // T[K] is an indexed access operator - regard T[K] as a whole
