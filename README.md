@@ -28,10 +28,6 @@ yarn lint
 yarn lint:fix
 ```
 
-## ToC
-
-See [ToC](toc.md).
-
 ## Reference Links
 
 + [typescript official docs](https://www.typescriptlang.org/docs/handbook)
