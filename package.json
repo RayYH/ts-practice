@@ -6,9 +6,9 @@
   "author": "Ray Hong",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf ./dist && gulp",
+    "build": "rimraf ./dist && gulp",
     "start": "npm run build && node ./dist/main.js",
-    "test": "rm -rf ./dist && jest --coverage",
+    "test": "rimraf ./dist && jest --coverage",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
     "lint:fix": "eslint --fix --ignore-path .gitignore . --ext ts --ext tsx"
@@ -26,6 +26,7 @@
     "gulp-typescript": "^6.0.0-alpha.1",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.6"
   },
