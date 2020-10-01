@@ -27,6 +27,9 @@ describe('examples', () => {
   });
 });
 
+/**
+ * The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+ */
 describe('Array.from', () => {
   test('array from a string', () => {
     expect(Array.from('foo')).toEqual(['f', 'o', 'o']);
@@ -102,6 +105,9 @@ describe('Array.from', () => {
   });
 });
 
+/**
+ * The Array.isArray() method determines whether the passed value is an Array.
+ */
 describe('Array.isArray', () => {
   expect(Array.isArray([1, 2, 3])).toBeTruthy();
   expect(Array.isArray([])).toBeTruthy();
@@ -112,4 +118,18 @@ describe('Array.isArray', () => {
   expect(Array.isArray(null)).toBeFalsy();
   expect(Array.isArray({ __proto__: Array.prototype })).toBeFalsy();
   expect(Array.isArray(new Uint8Array(32))).toBeFalsy();
+});
+
+/**
+ * The Array.of() method creates a new Array instance from a variable number of arguments,
+ * regardless of number or type of the arguments.
+ *
+ * Array.of(7) creates an array with a single element, 7,
+ * whereas Array(7) creates an empty array with a length property of 7
+ */
+describe('Array.of', () => {
+  expect(Array.of(3)).toEqual([3]);
+  expect(Array(3)).toEqual([undefined, undefined, undefined]);
+  expect(Array.of(1, 2, 3)).toEqual([1, 2, 3]);
+  expect(Array.of(undefined)).toEqual([undefined]);
 });
