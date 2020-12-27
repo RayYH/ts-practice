@@ -1,5 +1,7 @@
 # ts-practice
 
+**WARNING**: This project is not supported nor maintained anymore.
+
 Some ts code, **use at your own risk**.
 
 ## Requirements
